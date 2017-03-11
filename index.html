@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="index.css">
+  <script src="jquery-2.2.4.js"></script>
+  <title>exercice 4</title>
+</head>
+<body>
+  <button type="button" name="heuteur" id="height">10px</button>
+  <button type="button" name="vert" id="green">vert</button>
+  <button type="button" name="initial" id="initial">initial</button>
+  <button type="button" name="cacher" id="hide">cacher</button>
+  <button type="button" name="retour" id="show">revenu</button>
+  <div id="rectangle"></div>
+  <script>/*Construisez une page html avec 5 boutons et un rectangle.
+  Chaque bouton provoque une action sur le rectangle.
+  Bouton 1 : augmente la hauteur de 10px, si il dépasse 100px, il remet la hauteur à 10px
+  Bouton 2 : met le rectangle en vert
+  Bouton 3 : remet les couleurs initiales
+  Bouton 4 : fait disparaître le rectangle
+  Bouton 5 : fait réaparaître le rectangle*/
+  $(document).ready(function(){
+    //dans ma fonction click je demande une
+    $('#height').click(function(){
+      //animation qui augmente de 10 px par click
+      $('#rectangle').animate({
+        //augmente la hauteur de 10 pxs
+        height:'+=10px'
+      });if(function(){
+        // ici je comprend pas sa fonctionne pas
+        height = '100px'
+        $('#rectangle : reset').css('height', '50px');
+      });
+    });
+// au click le css est modifié
+    $('#green').click(function(){
+      $('#rectangle').css('background-color', 'green');
+    });
+    $('#initial').click(function(){
+      $('#rectangle').css('background-color', '');
+    });
+    //au click on cache ou montre le rectangle
+    $('#hide').click(function(){
+      $('#rectangle').hide();
+    });
+    $('#show').click(function(){
+      $('#rectangle').show();
+    });
+  });
+
+  </script>
+</body>
+</html>
